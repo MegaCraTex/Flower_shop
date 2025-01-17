@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flower Shop</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-3">
+        <h1>Welcome to the Flower Shop</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">Flower Shop</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'add_customer' %}">Add Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'add_product' %}">Add Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'add_purchase' %}">Add Purchase</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <p>This is the home page of your flower shop website.</p>
+                <ul>
+                    <li><a href="{% url 'add_customer' %}" class="btn btn-primary">Add Customer</a></li>
+                    <li><a href="{% url 'add_product' %}" class="btn btn-success">Add Product</a></li>
+                    <li><a href="{% url 'add_purchase' %}" class="btn btn-info">Add Purchase</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
